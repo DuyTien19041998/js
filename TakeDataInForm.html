@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lấy dữ liệu người dung từ form</title>
+</head>
+<body>
+    <form>
+            <input type="text" id="name">
+            <br><br>
+            <input type="number" id="old">
+            <br><br>
+            <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <input type="submit" value="Submit" onclick="event.preventDefault(); onClick()">
+            <!--prevenDefault(): hiển thị dữ liệu từ form -->
+    </form>
+        <div id="result"></div>
+
+        <script>
+            function onClick(){
+                var name=document.getElementById('name').value;
+                var old=document.getElementById('old').value;
+                var gender=document.getElementById('gender').value;
+                var result=document.getElementById('result');
+                result.innerHTML=   '<p>Name : '+name+'</p>'+  
+                '<p> Old : '+old+'</p>'+
+                '<p> Gander : '+gender+'</p>';
+            }
+        </script>
+</body>
+</html>

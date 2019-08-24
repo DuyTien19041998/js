@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ví dụ chương 3</title>
+    <script type="text/javascript">
+        function hamlappuong(lapphuong){
+            if(lapphuong==1){
+                return " ban dang lam gi day : ";
+            }
+            else {
+                return Math.pow(lapphuong,3);
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <p > ví dụ về lập phương của một số : </p>
+    <script type="text/javascript">
+        var thenum = 2;
+        var finalnum= hamlappuong(thenum);
+        if( isNaN(finalnum)){
+            alert(" bạn nên nhớ 1 lũy thừa bao nhiêu củng bằng 1 : ");
+        }
+        else {
+            alert(" lập phương của "+thenum+" là : "+finalnum);
+        }
+    </script>
+</body>
+</html>

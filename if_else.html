@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script></script>
+</head>
+<body>
+    <h1>Đây là câu điều kiện trong js</h1>
+    <script>
+        var os=2;
+        if( os=2){
+            console.log('Đây là hệ điều hành maxos: ');
+        }
+        else if( os=3){
+            console.log(' đây là hệ điều hành linux : ');
+        }
+        else if(os=1){
+            console.log(' Đây là hệ điều hành window');
+        }
+        else{
+            console.log(' bạn cần nhập lại : ');
+        }
+        // đây là phần về mảng 
+        /*
+            - thêm phần tử vào cuối mảng dùng hàm push();
+            - xóa phần tử cuối mảng dùng pop();
+            - thêm phần tử vào đầu mảng unshift();
+            - xóa phần tử đầu tiên dùng shift();
+            - xóa một phần tử bằng vị trí dung delete();
+            -sort : sắp xếp phần tử trong mảng:
+            -revense: đảo ngược vị trí trong mảng 
+            -concat: nối mảng 
+        */
+        function mang(){
+            var name=['tien', ' duy ','tran'];
+            name.push('thong minh ');
+            console.log(name);
+            name.unshift(' woa ');
+            console.log(name);
+            name.shift('woa ');
+            console.log(name);
+            delete name[2];
+            console.log(name);
+            
+        }
+        mang();
+
+        // củng có thể gái cho biến bằng một hàm
+        var tong=function(start, end){
+            var ketqua=0;
+            for(var i=start; i<end; i++){
+                ketqua+=i;
+            }
+            return ketqua
+        }
+        console.log(' tong : '+tong(1,10));
+        // sau dđây là khai baạo đối tương
+        var vit={
+            mau:'trang',// đây là đặc tính , đặc điểm
+            keu:function(){// đây là phương thức
+               return ' ẹo ẹo ẹo ';
+            }
+        }
+        // gọi lại đối tượng
+        console.log(" màu của vịt : "+vit.mau);
+        console.log(' tiếng kêu của con vịt :  '+vit.keu());
+
+        // khởi tạo mới đối tượng 
+        function duct(name, color){
+            this.name=name;
+            this.color=color;
+            this.talk = function(){
+                console.log(' quat quat quat quat : ');
+            }
+        };
+        var donal = new duct('duy tien','green');
+        var trong= new duct('heo quay ', ' red');
+        console.log(donal);
+        console.log(trong);
+        donal.talk();
+        trong.talk();// gọi lại phương thức talk của đối tượng duct
+
+        function Duct(name, color){
+            this.name=name;
+            this.color=color;
+            this.speak=function (){
+                console.log(this.name+' quac quac quac quac : ');
+            }
+        };
+        var donal= new Duct('donal',' yellow');
+        var tim= new Duct('tim','red');
+        donal.speak();
+        tim.speak();
+
+        // sử dụng prototype cho việc thiêt lập thuộc tính  và phương thức chung  cho cả một
+        // nhóm đối tượng 
+        //có thể khai báo prototype như là một object
+         Duct.prototype.height=1.5;// theo đơn vị feet
+         Duct.prototype.walk= function(distance){
+             console.log(this.name+' walks is'+distance+" mester ");
+         };
+         console.log(this.height+' height is '+donal.height);
+         donal.walk(5);
+         tim.walk(4);
+         alert('intention for the desktop . apply in the company ');
+        document.writeln(' đây là trang web của trần duy tiền : ');
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var nam= prompt('tên của bạn là gì : ');// khai báo một biến để hiển thị tên người dùng 
+       document.writeln('name :'+nam+'\n');
+        var ole = prompt(' how old are you : ');
+        document.writeln("old : "+ole);
+        var school = prompt(' bạn học trường nao vậy ??');
+        document.write(" school : "+school);
+        // promt : hiển thị lên một form để người dùng nhập vào
+        // confirm: hiển thị hai sư lựa chọn cho người dung chọn
+        // ví dụ : bạn có phải là nam hay không 
+        var isMale=confirm(' giới tính của bạn là gì: ');
+        var gander =isMale?'male':'female';
+        document.write('<p> Gander : '+gander+'</p>');
+    </script>
+</body>
+</html>
